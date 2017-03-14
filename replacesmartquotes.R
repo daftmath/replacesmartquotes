@@ -3,10 +3,10 @@ library(magrittr)
 
 # core logic
 replacesmartquotes <- function(input_string){
-  output_string <- gsub("'", "'", input_string) %>%
-    gsub("'", "'", .) %>%
-    gsub(""", '"', .) %>%
-    gsub(""", '"', .) %>%
+  output_string <- gsub("‘", "'", input_string) %>%
+    gsub("’", "'", .) %>%
+    gsub("“", '"', .) %>%
+    gsub("”", '"', .) %>%
     gsub("[\x84\x93\x94]", '"', .) %>% # ANSI version
     gsub("[\u201C\u201D\u201E\u201F\u2033\u2036]", '"', .) %>%
     gsub("[\x82\x91\x92]", "'", .) %>% # ANSI version
