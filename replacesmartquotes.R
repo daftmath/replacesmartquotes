@@ -14,17 +14,3 @@ replacesmartquotes <- function(input_string){
   return(output_string)
   
 }
-
-# test case (run this function after making any changes to core logic)
-test_replacesmartquotes <- function() {
-  test_string_1 <- 'Greg's "dog" is "wierd". Mary's car is **also**! #cha_racters'
-  test_string_2 <- """'''''''''''''''''"
-  
-  if((replacesmartquotes(test_string_1) == 'Greg\'s "dog" is "wierd". Mary\'s car is **also**! #cha_racters' &&
-      replacesmartquotes(test_string_2) == "\"\"'''''''''''''''''") == TRUE) {
-    print("PASS")
-  } else {
-    print("FAIL")
-  }
-  
-}
